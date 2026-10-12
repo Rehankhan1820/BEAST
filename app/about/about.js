@@ -6,17 +6,44 @@ import Link from "next/link";
 import Navbar from "../Navbar/Navbar";
 
 const BRAND = "BEAST";
+const GUILD_NAME = "BT SARKAR";
+const GUILD_LEADER = "BEAST";
 const MILESTONE = "BEAST 10K";
 const GAMING_UID = "519366839";
 
 const whatsappUrl = "https://whatsapp.com/channel/0029VbCe1ihElagq0H0kOW45";
 const youtubeUrl = "https://www.youtube.com/@Beastfire28";
+const facebookUrl = "https://www.facebook.com/share/1FZ7PaSwin/?mibextid=wwXIfr";
 
 const socials = [
-  { name: "YouTube", description: "Watch the latest content", href: youtubeUrl, image: "/youtube.png", enabled: true },
-  { name: "WhatsApp", description: "Join the community channel", href: whatsappUrl, image: "/whatsapp.png", enabled: true },
-  { name: "Facebook", description: "Follow BEAST", href: "https://www.facebook.com/share/1FZ7PaSwin/?mibextid=wwXIfr", image: "/facebook.png", enabled: true },
-  { name: "Instagram", description: "Coming soon", href: "", image: "/instagram.png", enabled: false },
+  {
+    name: "YouTube",
+    description: "Watch the latest content",
+    href: youtubeUrl,
+    image: "/youtube.png",
+    enabled: true,
+  },
+  {
+    name: "WhatsApp",
+    description: "Join the community channel",
+    href: whatsappUrl,
+    image: "/whatsapp.png",
+    enabled: true,
+  },
+  {
+    name: "Facebook",
+    description: "Follow BEAST",
+    href: facebookUrl,
+    image: "/facebook.png",
+    enabled: true,
+  },
+  {
+    name: "Instagram",
+    description: "Coming soon",
+    href: "",
+    image: "/instagram.png",
+    enabled: false,
+  },
 ];
 
 function SafeImage({ src, alt, width, height, className, priority = false }) {
@@ -91,9 +118,8 @@ function Hero() {
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div
-          className={`relative mx-auto mb-8 transition-all duration-1000 ease-out ${
-            loaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
-          }`}
+          className={`relative mx-auto mb-8 transition-all duration-1000 ease-out ${loaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
+            }`}
         >
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <div className="w-40 h-40 md:w-52 md:h-52 rounded-full border border-blue-400/30 animate-ring-pulse" />
@@ -115,16 +141,16 @@ function Hero() {
         </div>
 
         <div
-          className={`transition-all duration-700 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          className={`transition-all duration-700 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
           style={{ transitionDelay: "200ms" }}
         >
           <SectionEyebrow>About {BRAND}</SectionEyebrow>
         </div>
 
         <h1
-          className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.05] transition-all duration-700 ${
-            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-[1.05] transition-all duration-700 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
           style={{ transitionDelay: "300ms" }}
         >
           Built by passion.
@@ -135,18 +161,18 @@ function Hero() {
         </h1>
 
         <p
-          className={`mt-6 text-base md:text-lg text-blue-100/70 max-w-2xl mx-auto leading-relaxed transition-all duration-700 ${
-            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`mt-6 text-base md:text-lg text-blue-100/70 max-w-2xl mx-auto leading-relaxed transition-all duration-700 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
           style={{ transitionDelay: "450ms" }}
         >
-          {BRAND} is a Free Fire gaming creator and community-focused brand built around gameplay, entertainment and attitude. This is where the game meets the community.
+          {BRAND} is a Free Fire gaming creator and community-focused brand
+          built around gameplay, entertainment and attitude. This is where the
+          game meets the community.
         </p>
 
         <div
-          className={`mt-8 inline-flex items-center gap-3 px-5 md:px-6 py-2.5 rounded-full bg-gradient-to-r from-blue-500/15 via-blue-400/10 to-blue-500/15 border border-blue-400/40 backdrop-blur-md shadow-[0_0_30px_rgba(59,130,246,0.25)] transition-all duration-700 ${
-            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`mt-8 inline-flex items-center gap-3 px-5 md:px-6 py-2.5 rounded-full bg-gradient-to-r from-blue-500/15 via-blue-400/10 to-blue-500/15 border border-blue-400/40 backdrop-blur-md shadow-[0_0_30px_rgba(59,130,246,0.25)] transition-all duration-700 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
           style={{ transitionDelay: "550ms" }}
         >
           <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
@@ -156,13 +182,16 @@ function Hero() {
         </div>
 
         <div
-          className={`mt-9 flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-700 ${
-            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`mt-9 flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-700 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
           style={{ transitionDelay: "700ms" }}
         >
-          <NeonButton href={whatsappUrl} external variant="primary">Join Community</NeonButton>
-          <NeonButton href={youtubeUrl} external variant="secondary">Watch Videos</NeonButton>
+          <NeonButton href={whatsappUrl} external variant="primary">
+            Join Community
+          </NeonButton>
+          <NeonButton href={youtubeUrl} external variant="secondary">
+            Watch Videos
+          </NeonButton>
         </div>
       </div>
     </section>
@@ -181,19 +210,20 @@ function StorySection() {
                 <div className="relative w-full aspect-square rounded-2xl overflow-hidden ring-1 ring-blue-400/20 bg-blue-950/50">
                   <SafeImage
                     src="/logo.png"
-                    alt={`${BRAND}`}
+                    alt="BEAST Official Logo"
                     width={400}
                     height={400}
-                    className="object-contain w-full h-full p-8"
+                    className="block w-full h-full object-cover"
+                    priority
                   />
                 </div>
-                <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-blue-400/40 rounded-tl-lg" />
-                <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-blue-400/40 rounded-br-lg" />
-                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 rounded-xl bg-blue-950/90 border border-blue-400/40 backdrop-blur-md shadow-lg shadow-blue-500/20">
-                  <span className="text-xs font-black tracking-[0.2em] text-blue-300 uppercase">
-                    {MILESTONE}
-                  </span>
-                </div>
+              </div>
+              <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-blue-400/40 rounded-tl-lg" />
+              <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-blue-400/40 rounded-br-lg" />
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 rounded-xl bg-blue-950/90 border border-blue-400/40 backdrop-blur-md shadow-lg shadow-blue-500/20">
+                <span className="text-xs font-black tracking-[0.2em] text-blue-300 uppercase">
+                  {MILESTONE}
+                </span>
               </div>
             </div>
           </div>
@@ -207,13 +237,20 @@ function StorySection() {
 
             <div className="mt-6 space-y-4 text-blue-100/70 text-base md:text-lg leading-relaxed">
               <p>
-                {BRAND} started with a simple passion — the love for gaming. Free Fire became the arena where that passion turned into content, and content turned into a community.
+                {BRAND} started with a simple passion — the love for gaming.
+                Free Fire became the arena where that passion turned into
+                content, and content turned into a community.
               </p>
               <p>
-                Every video is created to entertain, to bring energy, and to keep the game alive beyond the match. From fast-paced gameplay moments to shorts that hit differently — it's all about the vibe.
+                Every video is created to entertain, to bring energy, and to
+                keep the game alive beyond the match. From fast-paced gameplay
+                moments to shorts that hit differently — it&apos;s all about the
+                vibe.
               </p>
               <p>
-                But {BRAND} is bigger than the videos. It's about the people watching, playing, and growing together. The community is what keeps the journey moving forward.
+                But {BRAND} is bigger than the videos. It&apos;s about the
+                people watching, playing, and growing together. The community is
+                what keeps the journey moving forward.
               </p>
             </div>
           </div>
@@ -225,9 +262,23 @@ function StorySection() {
 
 function MindsetSection() {
   const pillars = [
-    { key: "gaming", title: "Gaming", description: "Passion for gaming and competitive energy." },
-    { key: "attitude", title: "Attitude", description: "Confidence, personality and a unique creator identity." },
-    { key: "community", title: "Community", description: "The audience and community are an important part of BEAST." },
+    {
+      key: "gaming",
+      title: "Gaming",
+      description: "Passion for gaming and competitive energy.",
+    },
+    {
+      key: "attitude",
+      title: "Attitude",
+      description:
+        "Confidence, personality and a unique creator identity.",
+    },
+    {
+      key: "community",
+      title: "Community",
+      description:
+        "The audience and community are an important part of BEAST.",
+    },
   ];
 
   return (
@@ -270,10 +321,24 @@ function MindsetSection() {
 
 function CreatesSection() {
   const categories = [
-    { title: "Free Fire Shorts", description: "Fast-paced short-form content built for the scroll." },
-    { title: "Gaming Content", description: "Gameplay moments, highlights and in-game energy." },
-    { title: "Entertainment", description: "Content designed to entertain, not just to play." },
-    { title: "Community Content", description: "Moments created with and for the community." },
+    {
+      title: "Free Fire Shorts",
+      description: "Fast-paced short-form content built for the scroll.",
+    },
+    {
+      title: "Gaming Content",
+      description:
+        "Gameplay moments, highlights and in-game energy.",
+    },
+    {
+      title: "Entertainment",
+      description:
+        "Content designed to entertain, not just to play.",
+    },
+    {
+      title: "Community Content",
+      description: "Moments created with and for the community.",
+    },
   ];
 
   return (
@@ -296,8 +361,12 @@ function CreatesSection() {
               <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-400/30 flex items-center justify-center mb-4 group-hover:border-blue-400/70 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.35)] transition-all duration-300">
                 <div className="w-4 h-4 rounded-sm bg-gradient-to-br from-blue-400 to-cyan-300 group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-base md:text-lg font-bold text-white mb-2">{cat.title}</h3>
-              <p className="text-sm text-blue-100/60 leading-relaxed">{cat.description}</p>
+              <h3 className="text-base md:text-lg font-bold text-white mb-2">
+                {cat.title}
+              </h3>
+              <p className="text-sm text-blue-100/60 leading-relaxed">
+                {cat.description}
+              </p>
             </div>
           ))}
         </div>
@@ -316,10 +385,13 @@ function CommunitySection() {
             More than content. It&apos;s a community.
           </h2>
           <p className="mt-5 text-blue-100/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            {BRAND} is building a place where gaming, entertainment and community come together. Follow along and be part of the journey.
+            {BRAND} is building a place where gaming, entertainment and
+            community come together. Follow along and be part of the journey.
           </p>
           <div className="mt-8">
-            <NeonButton href={whatsappUrl} external variant="primary">Join Community</NeonButton>
+            <NeonButton href={whatsappUrl} external variant="primary">
+              Join Community
+            </NeonButton>
           </div>
         </div>
 
@@ -327,39 +399,56 @@ function CommunitySection() {
           {socials.map((card) => {
             const Wrapper = card.enabled ? "a" : "div";
             const props = card.enabled
-              ? { href: card.href, target: "_blank", rel: "noopener noreferrer" }
+              ? {
+                href: card.href,
+                target: "_blank",
+                rel: "noopener noreferrer",
+              }
               : {};
             return (
               <Wrapper
                 key={card.name}
                 {...props}
-                className={`group relative block rounded-2xl p-6 md:p-7 transition-all duration-400 ${
-                  card.enabled
+                className={`group relative block rounded-2xl p-6 md:p-7 transition-all duration-400 ${card.enabled
                     ? "bg-gradient-to-b from-blue-900/40 to-blue-950/60 backdrop-blur-md border border-blue-500/20 hover:border-blue-400/60 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_-10px_rgba(59,130,246,0.35)] cursor-pointer"
                     : "bg-blue-950/40 backdrop-blur-sm border border-white/5 opacity-60 cursor-default"
-                }`}
-                aria-label={card.enabled ? `Open ${card.name}` : `${card.name} coming soon`}
+                  }`}
+                aria-label={
+                  card.enabled
+                    ? `Open ${card.name}`
+                    : `${card.name} coming soon`
+                }
               >
                 <div className="relative flex items-start gap-4">
                   <div
-                    className={`flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center overflow-hidden transition-all duration-400 ${
-                      card.enabled
+                    className={`flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center overflow-hidden transition-all duration-400 ${card.enabled
                         ? "bg-blue-500/10 ring-1 ring-blue-400/30 group-hover:ring-blue-400/60 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]"
                         : "bg-blue-900/40 ring-1 ring-white/5"
-                    }`}
+                      }`}
                   >
-                    <SafeImage src={card.image} alt={card.name} width={56} height={56} className="object-contain w-9 h-9" />
+                    <SafeImage
+                      src={card.image}
+                      alt={card.name}
+                      width={56}
+                      height={56}
+                      className="object-contain w-9 h-9"
+                    />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-lg font-bold text-white mb-1">{card.name}</h3>
-                    <p className="text-sm text-blue-100/60 leading-relaxed">{card.description}</p>
+                    <h3 className="text-lg font-bold text-white mb-1">
+                      {card.name}
+                    </h3>
+                    <p className="text-sm text-blue-100/60 leading-relaxed">
+                      {card.description}
+                    </p>
                   </div>
                 </div>
                 <div className="relative mt-5">
                   <span
-                    className={`text-xs font-bold tracking-wider uppercase transition-colors duration-300 ${
-                      card.enabled ? "text-blue-400 group-hover:text-blue-300" : "text-blue-300/30"
-                    }`}
+                    className={`text-xs font-bold tracking-wider uppercase transition-colors duration-300 ${card.enabled
+                        ? "text-blue-400 group-hover:text-blue-300"
+                        : "text-blue-300/30"
+                      }`}
                   >
                     {card.enabled ? "[ Open ]" : "[ Coming Soon ]"}
                   </span>
@@ -402,35 +491,63 @@ function GamingIdentitySection() {
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-2xl overflow-hidden border border-blue-500/25 bg-gradient-to-b from-blue-900/40 to-blue-950/60 backdrop-blur-md p-5 md:p-6">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-blue-400/60 to-transparent" />
-          <div className="flex items-center justify-between gap-4">
+
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div className="min-w-0">
               <p className="text-[10px] md:text-xs font-bold tracking-[0.25em] text-blue-400/90 uppercase mb-1">
-                {BRAND} Gaming ID
+                Guild of {GUILD_NAME}
               </p>
-              <p className="text-lg md:text-xl font-black tracking-tight text-white font-mono">
+              <p className="text-lg md:text-xl font-black tracking-tight text-white">
+                LEADER — <span className="text-blue-300">{GUILD_LEADER}</span>
+              </p>
+              <p className="mt-1 text-xs md:text-sm font-mono font-semibold text-blue-300/80">
                 UID {GAMING_UID}
               </p>
             </div>
             <button
               onClick={handleCopy}
-              className={`flex-shrink-0 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-xs md:text-sm transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 ${
-                copied
+              className={`flex-shrink-0 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-xs md:text-sm transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 ${copied
                   ? "bg-green-500/20 text-green-300 border border-green-400/50"
                   : "bg-white/5 text-blue-100 border border-blue-400/30 backdrop-blur-md hover:bg-blue-500/15 hover:border-blue-400/60 hover:-translate-y-0.5"
-              }`}
+                }`}
               aria-label="Copy gaming UID"
             >
               {copied ? (
                 <>
-                  <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="3" aria-hidden="true">
-                    <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M20 6L9 17l-5-5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                   Copied!
                 </>
               ) : (
                 <>
-                  <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    aria-hidden="true"
+                  >
+                    <rect
+                      x="9"
+                      y="9"
+                      width="13"
+                      height="13"
+                      rx="2"
+                      ry="2"
+                    />
                     <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
                   </svg>
                   Copy UID
@@ -491,8 +608,12 @@ function FinalCTA() {
               Follow the journey. Watch the content. Be part of the community.
             </p>
             <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <NeonButton href={whatsappUrl} external variant="primary">Join Community</NeonButton>
-              <NeonButton href={youtubeUrl} external variant="secondary">Watch Videos</NeonButton>
+              <NeonButton href={whatsappUrl} external variant="primary">
+                Join Community
+              </NeonButton>
+              <NeonButton href={youtubeUrl} external variant="secondary">
+                Watch Videos
+              </NeonButton>
             </div>
           </div>
         </div>
@@ -504,15 +625,18 @@ function FinalCTA() {
 function Footer() {
   const nav = [
     { label: "Home", href: "/" },
+    { label: "Videos", href: "/videos" },
+    { label: "Community", href: "/community" },
+    { label: "Guild", href: "/guild" },
+    { label: "Guild Members", href: "/guild/members" },
     { label: "About", href: "/about" },
-    { label: "Videos", href: "/#videos" },
-    { label: "Community", href: "/#community" },
+    { label: "Contact", href: "/contact" },
   ];
 
   const footerSocials = [
     { name: "YouTube", href: youtubeUrl, image: "/youtube.png", enabled: true },
     { name: "WhatsApp", href: whatsappUrl, image: "/whatsapp.png", enabled: true },
-    { name: "Facebook", href: "https://www.facebook.com/share/1FZ7PaSwin/?mibextid=wwXIfr", image: "/facebook.png", enabled: true },
+    { name: "Facebook", href: facebookUrl, image: "/facebook.png", enabled: true },
     { name: "Instagram", href: "", image: "/instagram.png", enabled: false },
   ];
 
@@ -522,22 +646,49 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-14">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <Link href="/" className="flex items-center gap-3 mb-4 group w-fit" aria-label={`${BRAND} — Home`}>
-              <div className="relative w-11 h-11 rounded-full overflow-hidden ring-1 ring-blue-400/40 group-hover:ring-blue-400/80 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-300 bg-blue-950">
-                <SafeImage src="/logo.png" alt={`${BRAND} logo`} width={44} height={44} className="object-cover w-full h-full" />
+            <Link
+              href="/"
+              className="flex items-center gap-3 mb-4 group w-fit"
+              aria-label={`${BRAND} — Home`}
+            >
+
+              <div className="relative w-9 h-9 md:w-10 md:h-10 rounded-full overflow-hidden ring-2 ring-sky-400/60 bg-white transition-all duration-300 group-hover:ring-sky-500 group-hover:scale-105 group-hover:shadow-[0_0_22px_rgba(14,165,233,0.5)] flex-shrink-0">
+                <SafeImage
+                  src="/logo.png"
+                  alt="BEAST Official Logo"
+                  width={160}
+                  height={160}
+                  className="block w-full h-full object-cover"
+                  priority
+                />
               </div>
-              <span className="text-lg font-black tracking-tight text-white">{BRAND}</span>
+
+              <span className="text-lg font-black tracking-tight text-white">
+                {BRAND}
+              </span>
             </Link>
             <p className="text-sm text-blue-100/50 leading-relaxed max-w-xs">
               Gaming. Attitude. Community.
             </p>
+            <p className="mt-3 text-[11px] font-bold tracking-[0.25em] text-blue-400/70 uppercase">
+              Guild of {GUILD_NAME}
+            </p>
           </div>
 
           <div>
-            <h4 className="text-xs font-bold tracking-[0.25em] text-blue-400/90 uppercase mb-4">Navigation</h4>
-            <nav className="grid grid-cols-2 gap-2" aria-label="Footer navigation">
+            <h4 className="text-xs font-bold tracking-[0.25em] text-blue-400/90 uppercase mb-4">
+              Navigation
+            </h4>
+            <nav
+              className="grid grid-cols-2 gap-2"
+              aria-label="Footer navigation"
+            >
               {nav.map((link) => (
-                <Link key={link.href} href={link.href} className="text-sm text-blue-100/60 hover:text-blue-300 transition-colors duration-300 w-fit">
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-blue-100/60 hover:text-blue-300 transition-colors duration-300 w-fit"
+                >
                   {link.label}
                 </Link>
               ))}
@@ -545,25 +696,40 @@ function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs font-bold tracking-[0.25em] text-blue-400/90 uppercase mb-4">Social</h4>
+            <h4 className="text-xs font-bold tracking-[0.25em] text-blue-400/90 uppercase mb-4">
+              Social
+            </h4>
             <div className="flex flex-wrap gap-3">
               {footerSocials.map((social) => {
                 const Wrapper = social.enabled ? "a" : "div";
                 const props = social.enabled
-                  ? { href: social.href, target: "_blank", rel: "noopener noreferrer" }
+                  ? {
+                    href: social.href,
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  }
                   : {};
                 return (
                   <Wrapper
                     key={social.name}
                     {...props}
-                    aria-label={social.enabled ? social.name : `${social.name} coming soon`}
-                    className={`w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden transition-all duration-300 ${
+                    aria-label={
                       social.enabled
+                        ? social.name
+                        : `${social.name} coming soon`
+                    }
+                    className={`w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden transition-all duration-300 ${social.enabled
                         ? "bg-blue-900/40 ring-1 ring-blue-500/20 hover:ring-blue-400/60 hover:bg-blue-500/10 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] cursor-pointer"
                         : "bg-blue-950/40 ring-1 ring-white/5 opacity-40 cursor-default"
-                    }`}
+                      }`}
                   >
-                    <SafeImage src={social.image} alt={social.name} width={40} height={40} className="object-contain w-5 h-5" />
+                    <SafeImage
+                      src={social.image}
+                      alt={social.name}
+                      width={40}
+                      height={40}
+                      className="object-contain w-5 h-5"
+                    />
                   </Wrapper>
                 );
               })}
@@ -572,8 +738,12 @@ function Footer() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-blue-500/10 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-blue-100/40">© 2026 {BRAND}. All rights reserved.</p>
-          <p className="text-xs font-bold tracking-[0.25em] text-blue-400/60 uppercase">{MILESTONE}</p>
+          <p className="text-xs text-blue-100/40">
+            © 2026 {BRAND}. All rights reserved.
+          </p>
+          <p className="text-xs font-bold tracking-[0.25em] text-blue-400/60 uppercase">
+            {MILESTONE}
+          </p>
         </div>
       </div>
     </footer>
@@ -594,8 +764,10 @@ export default function AboutPage() {
             backgroundImage:
               "linear-gradient(rgba(59,130,246,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.5) 1px, transparent 1px)",
             backgroundSize: "64px 64px",
-            maskImage: "radial-gradient(ellipse at center, black 30%, transparent 80%)",
-            WebkitMaskImage: "radial-gradient(ellipse at center, black 30%, transparent 80%)",
+            maskImage:
+              "radial-gradient(ellipse at center, black 30%, transparent 80%)",
+            WebkitMaskImage:
+              "radial-gradient(ellipse at center, black 30%, transparent 80%)",
           }}
         />
         <div className="absolute inset-0">
@@ -631,49 +803,106 @@ export default function AboutPage() {
       </div>
 
       <style jsx global>{`
-        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        html {
+          scroll-behavior: smooth;
+          scroll-padding-top: 80px;
+        }
         body {
-          font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
-            "Helvetica Neue", Arial, sans-serif;
+          font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+            Roboto, "Helvetica Neue", Arial, sans-serif;
           background-color: #030814;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
         }
-        ::selection { background: rgba(59, 130, 246, 0.3); color: white; }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #030814; }
-        ::-webkit-scrollbar-thumb { background: rgba(59, 130, 246, 0.3); border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: rgba(59, 130, 246, 0.5); }
+        ::selection {
+          background: rgba(59, 130, 246, 0.3);
+          color: white;
+        }
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #030814;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: rgba(59, 130, 246, 0.3);
+          border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: rgba(59, 130, 246, 0.5);
+        }
 
         @keyframes pulse-slow {
-          0%, 100% { opacity: 0.5; transform: scale(1); }
-          50% { opacity: 0.8; transform: scale(1.05); }
+          0%,
+          100% {
+            opacity: 0.5;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 0.8;
+            transform: scale(1.05);
+          }
         }
-        .animate-pulse-slow { animation: pulse-slow 6s ease-in-out infinite; }
+        .animate-pulse-slow {
+          animation: pulse-slow 6s ease-in-out infinite;
+        }
 
         @keyframes ring-pulse {
-          0% { transform: scale(0.9); opacity: 0.6; }
-          50% { transform: scale(1.05); opacity: 0.2; }
-          100% { transform: scale(0.9); opacity: 0.6; }
+          0% {
+            transform: scale(0.9);
+            opacity: 0.6;
+          }
+          50% {
+            transform: scale(1.05);
+            opacity: 0.2;
+          }
+          100% {
+            transform: scale(0.9);
+            opacity: 0.6;
+          }
         }
-        .animate-ring-pulse { animation: ring-pulse 4s ease-in-out infinite; }
-        .animate-ring-pulse-delayed { animation: ring-pulse 4s ease-in-out infinite 1s; }
+        .animate-ring-pulse {
+          animation: ring-pulse 4s ease-in-out infinite;
+        }
+        .animate-ring-pulse-delayed {
+          animation: ring-pulse 4s ease-in-out infinite 1s;
+        }
 
         @keyframes drift-slow {
-          0%, 100% { transform: translate(0, 0); }
-          50% { transform: translate(30px, -30px); }
+          0%,
+          100% {
+            transform: translate(0, 0);
+          }
+          50% {
+            transform: translate(30px, -30px);
+          }
         }
-        .animate-drift-slow { animation: drift-slow 20s ease-in-out infinite; }
-        .animate-drift-slow-reverse { animation: drift-slow 25s ease-in-out infinite reverse; }
+        .animate-drift-slow {
+          animation: drift-slow 20s ease-in-out infinite;
+        }
+        .animate-drift-slow-reverse {
+          animation: drift-slow 25s ease-in-out infinite reverse;
+        }
 
         @keyframes float {
-          0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
-          50% { transform: translateY(-20px) translateX(10px); opacity: 0.7; }
+          0%,
+          100% {
+            transform: translateY(0) translateX(0);
+            opacity: 0.3;
+          }
+          50% {
+            transform: translateY(-20px) translateX(10px);
+            opacity: 0.7;
+          }
         }
-        .animate-float { animation: float 8s ease-in-out infinite; }
+        .animate-float {
+          animation: float 8s ease-in-out infinite;
+        }
 
         @media (prefers-reduced-motion: reduce) {
-          *, *::before, *::after {
+          *,
+          *::before,
+          *::after {
             animation-duration: 0.01ms !important;
             animation-iteration-count: 1 !important;
             transition-duration: 0.01ms !important;

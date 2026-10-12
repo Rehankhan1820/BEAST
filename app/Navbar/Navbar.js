@@ -26,7 +26,7 @@ const navLinks = [
 const guildSubLinks = [
   { label: "Guild Overview", href: "/guild" },
   { label: "Add Guild Members", href: "add-members" },
- 
+
 ];
 
 function SafeImage({ src, alt, width, height, className, priority = false }) {
@@ -156,20 +156,18 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
-          scrolled
-            ? "bg-white/80 backdrop-blur-xl border-b border-sky-300/40 shadow-[0_4px_30px_-10px_rgba(14,165,233,0.35)]"
-            : "bg-white/50 backdrop-blur-md border-b border-sky-200/30"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${scrolled
+          ? "bg-white/80 backdrop-blur-xl border-b border-sky-300/40 shadow-[0_4px_30px_-10px_rgba(14,165,233,0.35)]"
+          : "bg-white/50 backdrop-blur-md border-b border-sky-200/30"
+          }`}
       >
         <nav
           className="max-w-7xl mx-auto px-3 sm:px-5 lg:px-8"
           aria-label="Primary navigation"
         >
           <div
-            className={`flex items-center justify-between transition-all duration-500 ${
-              scrolled ? "h-14 md:h-16" : "h-16 md:h-20"
-            }`}
+            className={`flex items-center justify-between transition-all duration-500 ${scrolled ? "h-14 md:h-16" : "h-16 md:h-20"
+              }`}
           >
             {/* LEFT — hamburger + brand */}
             <div className="flex items-center gap-2 sm:gap-3 min-w-0">
@@ -193,16 +191,18 @@ export default function Navbar() {
                 className="group flex items-center gap-2 md:gap-3 rounded-lg p-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white min-w-0"
                 aria-label={`${BRAND} — Home`}
               >
+
                 <div className="relative w-9 h-9 md:w-10 md:h-10 rounded-full overflow-hidden ring-2 ring-sky-400/60 bg-white transition-all duration-300 group-hover:ring-sky-500 group-hover:scale-105 group-hover:shadow-[0_0_22px_rgba(14,165,233,0.5)] flex-shrink-0">
                   <SafeImage
                     src="/logo.png"
-                    alt={`${BRAND} logo`}
-                    width={40}
-                    height={40}
-                    className="object-cover w-full h-full"
+                    alt="BEAST Official Logo"
+                    width={160}
+                    height={160}
+                    className="block w-full h-full object-cover"
                     priority
                   />
                 </div>
+
                 <span className="text-base sm:text-lg font-black tracking-tight text-slate-900 transition-colors duration-300 group-hover:text-sky-700 truncate">
                   {BRAND}
                 </span>
@@ -226,20 +226,18 @@ export default function Navbar() {
                         ref={guildBtnRef}
                         type="button"
                         onClick={() => setGuildMenuOpen((v) => !v)}
-                        className={`relative inline-flex items-center gap-1 px-2.5 xl:px-3 py-2 text-[13px] xl:text-sm font-semibold rounded-lg transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 whitespace-nowrap ${
-                          isGuildSectionActive
-                            ? "text-sky-700"
-                            : "text-slate-600 hover:text-slate-900"
-                        }`}
+                        className={`relative inline-flex items-center gap-1 px-2.5 xl:px-3 py-2 text-[13px] xl:text-sm font-semibold rounded-lg transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 whitespace-nowrap ${isGuildSectionActive
+                          ? "text-sky-700"
+                          : "text-slate-600 hover:text-slate-900"
+                          }`}
                         aria-haspopup="true"
                         aria-expanded={guildMenuOpen}
                       >
                         Guild
                         <svg
                           viewBox="0 0 24 24"
-                          className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                            guildMenuOpen ? "rotate-180" : ""
-                          }`}
+                          className={`w-3.5 h-3.5 transition-transform duration-200 ${guildMenuOpen ? "rotate-180" : ""
+                            }`}
                           fill="none"
                           stroke="currentColor"
                           strokeWidth="2.5"
@@ -250,11 +248,10 @@ export default function Navbar() {
                           <path d="M6 9l6 6 6-6" />
                         </svg>
                         <span
-                          className={`absolute left-1/2 -translate-x-1/2 bottom-0.5 h-[2px] rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 transition-all duration-300 ${
-                            isGuildSectionActive
-                              ? "w-6 opacity-100 shadow-[0_0_10px_rgba(14,165,233,0.7)]"
-                              : "w-0 opacity-0"
-                          }`}
+                          className={`absolute left-1/2 -translate-x-1/2 bottom-0.5 h-[2px] rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 transition-all duration-300 ${isGuildSectionActive
+                            ? "w-6 opacity-100 shadow-[0_0_10px_rgba(14,165,233,0.7)]"
+                            : "w-0 opacity-0"
+                            }`}
                         />
                       </button>
 
@@ -276,11 +273,10 @@ export default function Navbar() {
                                 href={sub.href}
                                 onClick={() => setGuildMenuOpen(false)}
                                 role="menuitem"
-                                className={`flex items-center justify-between px-4 py-2.5 text-sm font-semibold transition-colors ${
-                                  subActive
-                                    ? "bg-sky-100/70 text-sky-800"
-                                    : "text-slate-700 hover:bg-sky-50 hover:text-sky-800"
-                                }`}
+                                className={`flex items-center justify-between px-4 py-2.5 text-sm font-semibold transition-colors ${subActive
+                                  ? "bg-sky-100/70 text-sky-800"
+                                  : "text-slate-700 hover:bg-sky-50 hover:text-sky-800"
+                                  }`}
                               >
                                 <span>{sub.label}</span>
                                 <span
@@ -303,20 +299,18 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`relative px-2.5 xl:px-3 py-2 text-[13px] xl:text-sm font-semibold transition-colors duration-300 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 whitespace-nowrap ${
-                      active
-                        ? "text-sky-700"
-                        : "text-slate-600 hover:text-slate-900"
-                    }`}
+                    className={`relative px-2.5 xl:px-3 py-2 text-[13px] xl:text-sm font-semibold transition-colors duration-300 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 whitespace-nowrap ${active
+                      ? "text-sky-700"
+                      : "text-slate-600 hover:text-slate-900"
+                      }`}
                     aria-current={active ? "page" : undefined}
                   >
                     {link.label}
                     <span
-                      className={`absolute left-1/2 -translate-x-1/2 bottom-0.5 h-[2px] rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 transition-all duration-300 ${
-                        active
-                          ? "w-6 opacity-100 shadow-[0_0_10px_rgba(14,165,233,0.7)]"
-                          : "w-0 opacity-0"
-                      }`}
+                      className={`absolute left-1/2 -translate-x-1/2 bottom-0.5 h-[2px] rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 transition-all duration-300 ${active
+                        ? "w-6 opacity-100 shadow-[0_0_10px_rgba(14,165,233,0.7)]"
+                        : "w-0 opacity-0"
+                        }`}
                     />
                   </Link>
                 );
@@ -350,16 +344,14 @@ export default function Navbar() {
 
       {/* MOBILE DRAWER */}
       <div
-        className={`fixed inset-0 z-[60] lg:hidden ${
-          drawerOpen ? "pointer-events-auto" : "pointer-events-none"
-        }`}
+        className={`fixed inset-0 z-[60] lg:hidden ${drawerOpen ? "pointer-events-auto" : "pointer-events-none"
+          }`}
         aria-hidden={!drawerOpen}
       >
         {/* Backdrop */}
         <div
-          className={`absolute inset-0 bg-slate-900/50 backdrop-blur-sm transition-opacity duration-300 ${
-            drawerOpen ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 bg-slate-900/50 backdrop-blur-sm transition-opacity duration-300 ${drawerOpen ? "opacity-100" : "opacity-0"
+            }`}
           onClick={() => setDrawerOpen(false)}
         />
 
@@ -369,9 +361,8 @@ export default function Navbar() {
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation"
-          className={`absolute top-0 left-0 h-full w-[85%] max-w-[340px] bg-gradient-to-b from-white via-sky-50 to-sky-100 border-r border-sky-300/50 shadow-[10px_0_60px_-15px_rgba(14,165,233,0.5)] transition-transform duration-300 ease-out flex flex-col ${
-            drawerOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
+          className={`absolute top-0 left-0 h-full w-[85%] max-w-[340px] bg-gradient-to-b from-white via-sky-50 to-sky-100 border-r border-sky-300/50 shadow-[10px_0_60px_-15px_rgba(14,165,233,0.5)] transition-transform duration-300 ease-out flex flex-col ${drawerOpen ? "translate-x-0" : "-translate-x-full"
+            }`}
         >
           {/* Header */}
           <div className="relative px-5 pt-5 pb-4 bg-gradient-to-r from-sky-500 to-sky-600 text-white flex-shrink-0">
@@ -379,15 +370,18 @@ export default function Navbar() {
 
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2.5">
-                <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-white/70 bg-white flex-shrink-0">
+
+                <div className="relative w-9 h-9 md:w-10 md:h-10 rounded-full overflow-hidden ring-2 ring-sky-400/60 bg-white transition-all duration-300 group-hover:ring-sky-500 group-hover:scale-105 group-hover:shadow-[0_0_22px_rgba(14,165,233,0.5)] flex-shrink-0">
                   <SafeImage
                     src="/logo.png"
-                    alt={`${BRAND} logo`}
-                    width={40}
-                    height={40}
-                    className="object-cover w-full h-full"
+                    alt="BEAST Official Logo"
+                    width={160}
+                    height={160}
+                    className="block w-full h-full object-cover"
+                    priority
                   />
                 </div>
+
                 <span className="text-xl font-black tracking-tight">
                   {BRAND}
                 </span>
@@ -430,27 +424,24 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       onClick={() => setDrawerOpen(false)}
-                      className={`group flex items-center justify-between px-4 py-3.5 rounded-xl text-base font-semibold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 border ${
-                        active
-                          ? "text-sky-800 bg-white border-sky-400/60 shadow-md shadow-sky-500/10"
-                          : "text-slate-700 hover:text-sky-800 hover:bg-white/70 border-transparent"
-                      }`}
+                      className={`group flex items-center justify-between px-4 py-3.5 rounded-xl text-base font-semibold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 border ${active
+                        ? "text-sky-800 bg-white border-sky-400/60 shadow-md shadow-sky-500/10"
+                        : "text-slate-700 hover:text-sky-800 hover:bg-white/70 border-transparent"
+                        }`}
                       aria-current={active ? "page" : undefined}
                     >
                       <div className="flex items-center gap-3">
                         <span
-                          className={`w-1.5 h-1.5 rounded-full flex-shrink-0 transition-all ${
-                            active ? "bg-sky-500 w-4" : "bg-slate-400/60"
-                          }`}
+                          className={`w-1.5 h-1.5 rounded-full flex-shrink-0 transition-all ${active ? "bg-sky-500 w-4" : "bg-slate-400/60"
+                            }`}
                         />
                         <span>{link.label}</span>
                       </div>
                       <span
-                        className={`text-sky-500 transition-transform duration-300 ${
-                          active
-                            ? "translate-x-0 opacity-100"
-                            : "translate-x-2 opacity-40 group-hover:translate-x-0 group-hover:opacity-100"
-                        }`}
+                        className={`text-sky-500 transition-transform duration-300 ${active
+                          ? "translate-x-0 opacity-100"
+                          : "translate-x-2 opacity-40 group-hover:translate-x-0 group-hover:opacity-100"
+                          }`}
                         aria-hidden="true"
                       >
                         →

@@ -202,16 +202,18 @@ function Hero() {
             <div className="absolute inset-0 rounded-full bg-sky-400/40 blur-3xl animate-pulse-slow" />
 
             {/* Perfect-fit circle container */}
-            <div className="relative w-full h-full rounded-full overflow-hidden ring-2 ring-sky-500/60 shadow-[0_0_60px_rgba(14,165,233,0.5)] bg-white">
-              <SafeImage
-                src="/logo.png"
-                alt="BEAST Logo"
-                width={224}
-                height={224}
-                className="object-cover w-full h-full"
-                priority
-              />
-            </div>
+           
+<div className="relative w-full h-full rounded-full overflow-hidden ring-2 ring-blue-400/50 shadow-[0_0_60px_rgba(59,130,246,0.5)] bg-blue-950/50">
+  <SafeImage
+    src="/logo.png"
+    alt="BEAST logo"
+    width={400}
+    height={400}
+    className="object-cover w-full h-full"
+    priority
+  />
+</div>
+
           </div>
         </div>
 
